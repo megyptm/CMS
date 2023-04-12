@@ -1,0 +1,36 @@
+RewriteEngine on
+Options -Indexes
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /404.php
+
+# Caffee SEO-Friendly URLs
+
+RewriteRule ^callback/([\w-]+)/([\w-]+)/?$ callback/$1.php?action=$2 [QSA,NC,L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^([\w-]+)/?$ index.php?page=$1 [QSA,NC,L]
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^([\w-]+)/([0-9]+)/?$ index.php?page=$1&id=$2 [QSA,NC,L]
+
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^images/(.*)?$ images/image-not-found.png [NC,L]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^images/(.*)/(.*)?$ images/image-not-found.png [NC,L]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^images/(.*)/(.*)/(.*)?$ images/image-not-found.png [NC,L]
+
+
+# After your last rewrite rule.
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^.+\.php$ /404 [NC,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php80” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php80 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+

@@ -1,0 +1,55 @@
+{  "name": "maatify/cms",
+    "description": "Official PHP project for maatify.dev CMS, known by our team",
+    "version": "1.0.5",
+    "type": "project",
+    "keywords": [
+        "PHP",
+        "JSON",
+        "Response",
+        "Handler"
+    ],
+    "homepage": "https://github.com/Maatify/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Abdulalim",
+            "email": "mohamed@maatify.dev",
+            "homepage": "https://www.maatify.com/",
+            "role": "Backend Developer"
+        },
+        {
+            "name": "Ahmed Fawzy",
+            "email": "a.fawzy@maatify.dev",
+            "homepage": "https://www.maatify.com/",
+            "role": "Frontend Developer"
+        },
+        {
+            "name": "Ahmed Abdullah",
+            "email": "a.abdullah@maatify.dev",
+            "homepage": "https://www.maatify.com/",
+            "role": "Android Developer"
+        },
+        {
+            "name": "Elmokhtar Ahmed",
+            "email": "mokhtar@maatify.dev",
+            "homepage": "https://www.maatify.com/",
+            "role": "IOS Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.0.0"
+        }
+    },
+    "require": {
+        "ext-pdo": "*",
+        "ext-openssl": "*",
+        "ext-fileinfo": "*",
+        "maatify/handler": "^1.0"
+    }
+}

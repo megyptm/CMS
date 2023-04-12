@@ -1,0 +1,14 @@
+{# templates/emails/signup.html.twig #}
+<h1>Welcome {{ name }}!</h1>
+
+
+<p><code>{{ code }}</code></p>
+
+<a href="{{ code }}">{{ code }}</a>
+
+<pre>
+    <hr>
+<span style="color: red">Please do not respond to this email. This mailbox is not monitored, and you will not receive a response.</span>
+    <hr>
+(sent at {{ time }})
+</pre>
